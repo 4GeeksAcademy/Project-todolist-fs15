@@ -18,19 +18,16 @@ const Home = () => {
 	}
 
 	const handleDelete = (i) => {
-		// const newToDos = toDos.filter((_, index) => index !== i)
-		const newToDos = Array(...toDos).splice(i, 1)
-		console.log(newToDos)
-		setToDos(newToDos)
+		setToDos(toDos.filter((_, index) => index !== i))
 	}
 
 
 	return (
 		<div className="container">
 			<h1>Todos</h1>
-			<div>
+			<div className="lista-contenedor">
 				<ul>
-					<li><input type="text" placeholder="Agregar nueva tarea" onChange={(e) => setItem(e.target.value)} value={item} onKeyDown={(e) => handleEnter(e)} /></li>
+					<li><input type="text" placeholder="Agregar nueva tarea" onChange={(e) => setItem(e.target.value)} value={item} onKeyDown={(e) => handleEnter(e)}></input> </li>
 					{toDos && toDos.map((item, index) => (
 						<li key={index}> {item} <i className="fas fa-times" onClick={() => handleDelete(index)}></i></li>
 					))}
