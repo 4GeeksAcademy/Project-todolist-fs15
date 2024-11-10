@@ -27,11 +27,11 @@ const Home = () => {
 			<h1>todos</h1>
 			<div className="lista-contenedor">
 				<ul>
-					<li><input type="text" placeholder="Agregar nueva tarea" onChange={(e) => setItem(e.target.value)} value={item} onKeyDown={(e) => handleEnter(e)}></input> </li>
+					<li><input type="text" placeholder="Que falta hacer?" onChange={(e) => setItem(e.target.value)} value={item} onKeyDown={(e) => handleEnter(e)}></input> </li>
 					{toDos && toDos.map((item, index) => (
 						<li key={index}> {item} <i className="fa fa-times" onClick={() => handleDelete(index)}></i></li>
 					))}
-					<li> {toDos.length} items faltantes </li>
+					<li className="faltantes"> {toDos.length} tareas faltantes </li>
 				</ul>
 			</div>
 		</div>

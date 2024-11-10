@@ -45,7 +45,9 @@ h1 {
     color: grey;
 }
 i {
-    color: grey;
+    color: lightgrey;
     font-size: 20px;
-    font-weight: lighter;
+}
+.faltantes{
+    font-size: 14px;
 }
