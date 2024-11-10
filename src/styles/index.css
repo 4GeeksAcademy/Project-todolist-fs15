@@ -13,11 +13,13 @@
 body {
     margin-top: 50px;
     background-color:whitesmoke;
+    display: flex;
+    justify-content: center;
 }
 ul li {
     border: 1px solid grey;
     list-style: none;
-    padding: 5px;
+    padding: 10px;
     width: 500px;
     background-color: white;
     box-shadow:
@@ -28,14 +30,22 @@ ul li {
     0 20px 1px -9px rgba(0, 0, 0, 0.15);
 }
 li {
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
 }
 input {
     border: none;
     width: 100%;
 }
 h1 {
-    margin-left: 200px;
+    text-align: center;
     margin-bottom: 20px;
+    font-size: 100px;
+    font-weight: lighter;
+    color: grey;
+}
+i {
+    color: grey;
+    font-size: 20px;
+    font-weight: lighter;
 }
